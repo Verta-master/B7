@@ -14,8 +14,8 @@
     </div>
     <div class="header__block">
       <a href="Tel:+74993481843" class="phone">+7 (499) 348-18-43</a>
-      <button type="button" class="btn btn--red">Есть проблема? Звоните нам</button>
-      <button type="button" class="btn btn--yellow">Есть вопрос? Пишите нам</button>
+      <button type="button" class="btn btn--red header__btn">Есть проблема?<br>Звоните нам</button>
+      <button type="button" class="btn btn--yellow">Есть вопрос?<br>Пишите нам</button>
     </div>
   </header>
   
@@ -23,19 +23,52 @@
     <section class="promo">
       <div class="swiper-container promo__slider">
         <ul class="swiper-wrapper">
-          <li class="swiper-slide">
+          <li class="swiper-slide promo__slide">
+            <img src="img/slide1.jpg" alt="Олег Гуров" width="1920" height="1067">
             <p class="promo__slogan">Нет другого результата, кроме победы!</p>
-            <h1>Защита прав потребителей</h1>
-            <p>Консультация, подготовка документов, участие в судебных заседаниях и полный спектр юридической помощи вплоть до достижения требуемого результата по <span>фиксированным ценам</span>.</p>
-            <p class="promo__stamp">Фиксированные цены. Никаких скрытых комиссий</p>
-            <p class="promo__price">от <b>19 900</b><span></span> руб.</p>
-            <button type="button" class="btn btn--red">Позвоните мне</button>
-            <div class="promo__name">
-              <p><b>Олег</b> Гуров</p>
-              <span>специалист по работе с госорганами</span>
+            <div class="promo__wrap wrapper">
+              <h1>Защита прав потребителей</h1>
+              <p class="promo__text">Консультация, подготовка документов, участие в судебных заседаниях и полный спектр юридической помощи вплоть до достижения требуемого результата по <span>фиксированным ценам</span>.</p>
+              <p class="promo__stamp">Фиксированные цены. Никаких скрытых комиссий</p>
+              <p class="promo__price">от <b>19 900</b><span> руб.</span></p>
+              <button type="button" class="btn btn--red promo__btn">Позвоните мне</button>
+              <div class="promo__name">
+                <p><b>Олег</b> Гуров</p>
+                <span>специалист по работе с госорганами</span>
+              </div>
             </div>
           </li>
-
+          <li class="swiper-slide promo__slide">
+            <img src="img/slide2.jpg" alt="Юрий Панкратов" width="1920" height="1067">
+            <p class="promo__slogan">Профессиональный подход<br>- эффективный результат.</p>
+            <div class="promo__wrap wrapper">
+              <h2>Взыскание долгов</h2>
+              <h2>Судебные споры</h2>
+              <p class="promo__text">Консультация, подготовка всех документов, участие в судебных заседаниях и полный спектр юридической помощи вплоть до достижения требуемого результата.</p>
+              <p class="promo__stamp">Разумные цены + Эффективный результат</p>
+              <p class="promo__price">от <b>29 900</b><span> руб.</span></p>
+              <button type="button" class="btn btn--red promo__btn">Позвоните мне</button>
+              <div class="promo__name">
+                <p><b>Юрий</b> Панкратов</p>
+                <span>судебный юрист</span>
+              </div>
+            </div>
+          </li>
+          <li class="swiper-slide promo__slide">
+            <img src="img/slide3.jpg" alt="Антон Уразов" width="1920" height="1067">
+            <p class="promo__slogan">Невозможно победить того, кто не сдается.</p>
+            <div class="promo__wrap wrapper">
+              <h2>Банкротство физических лиц</h2>
+              <p class="promo__text">Консультация, подготовка всех документов, участие в судебных заседаниях и полный спектр юридической помощи вплоть до достижения требуемого результата.</p>
+              <p class="promo__stamp">Разумные цены + Эффективный результат</p>
+              <p class="promo__price">от <b>49 900</b><span> руб.</span></p>
+              <button type="button" class="btn btn--red promo__btn">Позвоните мне</button>
+              <div class="promo__name">
+                <p><b>Антон</b> Уразов</p>
+                <span>арбитражный управляющий</span>
+              </div>
+            </div>
+          </li>
         </ul>
         <div class="swiper-pagination promo__pagination"></div>
         <div class="swiper-button-prev promo__prev"></div>
@@ -245,6 +278,8 @@
         nextEl: '.promo__next',
         prevEl: '.promo__prev',
       },
+      effect: 'fade',
+      speed: 1000
     });
     var mySwiper = new Swiper ('.result__slider', {
       loop: true,
