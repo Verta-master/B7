@@ -897,6 +897,9 @@ h2 span {
   background-image: url(../img/shape.png);
   background-repeat: no-repeat;
 }
+.help__list {
+  margin-bottom: 120px;
+}
 .help__item {
   width: 100%;
   height: 250px;
@@ -947,14 +950,184 @@ h2 span {
   -webkit-transform: translate(25px, -50%);
           transform: translate(25px, -50%);
 }
+.help__btns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 60px;
+}
 .help__btn-yellow {
+  position: relative;
+  margin-right: 28px;
   color: #231f1f;
   font-size: 20px;
   font-weight: 700;
   background-color: #ffd964;
+  -webkit-box-shadow: 0px 5px 7px 0px rgba(254, 189, 76, 0.3);
+          box-shadow: 0px 5px 7px 0px rgba(254, 189, 76, 0.3);
+}
+.help__btn-yellow::before {
+  content: "Есть вопрос?";
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  font-size: 24px;
+  color: #454444;
+  font-weight: 300;
+}
+.help__btn-yellow:hover::before {
+  cursor: default;
+  opacity: 1;
 }
 .help__btn-red {
+  position: relative;
   font-size: 20px;
   font-weight: 700;
   background-color: #bc2b30;
+  -webkit-box-shadow: 0px 5px 7px 0px rgba(188, 43, 48, 0.3);
+          box-shadow: 0px 5px 7px 0px rgba(188, 43, 48, 0.3);
+}
+.help__btn-red::before {
+  content: "Есть проблема?";
+  position: absolute;
+  top: -45px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  width: 100%;
+  font-size: 24px;
+  color: #454444;
+  font-weight: 300;
+}
+.help__btn-red:hover::before {
+  cursor: default;
+  opacity: 1;
+}
+.stamp {
+  background-image: url(../img/bg-stamp.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+.stamp p {
+  color: #fff;
+  text-align: center;
+  margin-top: 0;
+}
+.stamp__wrap {
+  position: relative;
+  padding-top: 85px;
+  padding-bottom: 60px;
+}
+.stamp__wrap::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: -110px;
+  width: 234px;
+  height: 234px;
+  background-image: url(../img/stamp.png);
+  background-repeat: no-repeat;
+}
+.result h2 {
+  text-align: left;
+}
+.result__slide {
+  width: 100%;
+  padding-bottom: 70px;
+  padding-left: 195px;
+  padding-right: 195px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.result__slide h3 {
+  color: #bc2b30;
+  font-size: 30px;
+  font-weight: 400;
+}
+.result__slide p {
+  max-width: 750px;
+}
+.result__date {
+  font-size: 40px;
+}
+.result__date span {
+  color: #bc2b30;
+  border-bottom: 4px solid #bc2b30;
+}
+.result__date sup {
+  font-size: 24px;
+}
+.result__file {
+  display: block;
+  float: right;
+  padding-left: 35px;
+  position: relative;
+  font-size: 16px;
+  color: #bc2b30;
+  font-style: italic;
+  text-align: right;
+}
+.result__file span {
+  border-bottom: 1px dashed #bc2b30;
+}
+.result__file:hover span {
+  border-bottom: 1px solid #bc2b30;
+}
+.result__file::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 24px;
+  height: 26px;
+  background-image: url(../img/icon-file.png);
+  background-repeat: no-repeat;
+}
+.result__pagination > .swiper-pagination-bullet {
+  width: 12px;
+  height: 12px;
+  margin: 0 5px;
+  border: 1px solid #bc2b30;
+  opacity: 1;
+  background-color: rgba(255, 255, 255, 0);
+}
+.result__pagination > .swiper-pagination-bullet-active {
+  background-color: #bc2b30;
+}
+.result__slider > .swiper-pagination-bullets {
+  bottom: 10px;
+}
+.result__next {
+  background-image: url(../img/icon-arrow-next.png);
+  background-repeat: no-repeat;
+  background-size: 21px 13px;
+}
+.result__next.swiper-button-disabled {
+  opacity: 1;
+  background-image: url(../img/icon-arrow-disabled.png);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.result__prev {
+  background-image: url(../img/icon-arrow-next.png);
+  background-repeat: no-repeat;
+  background-size: 21px 13px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.result__prev.swiper-button-disabled {
+  opacity: 1;
+  background-image: url(../img/icon-arrow-disabled.png);
+  -webkit-transform: none;
+          transform: none;
 }
