@@ -13,7 +13,6 @@
   border: 1px solid rgb(205, 205, 205);
   background-color: #fff;
   position: relative;
-  z-index: 1;
 }
 
 .price__item {
@@ -22,10 +21,26 @@
   align-items: center;
   position: relative;
   min-height: 182px;
-  z-index: 1;
   
   &:nth-child(2n+1) {
     background-color: #f8f8f8;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: 62%;
+    right: -140px;
+    display: block;
+    width: 182px;
+    height: 28px;
+    background-image: url(../img/shadow.png);
+    background-repeat: no-repeat;
+    z-index: -1;
+  }
+  
+  &:last-child::after {
+    display: none;
   }
 }
 
@@ -58,7 +73,6 @@
   top: 50%;
   transform: translateY(-50%);
   right: -132px;
-  z-index: 5;
   width: 132px;
   height: 75px;
   padding-left: 12px;
@@ -76,7 +90,6 @@
   &--red {
     background-color: @red;
     color: #fff;
-    z-index: 5;
   }
   
   &--yellow {
@@ -90,18 +103,5 @@
     color: #fff;
     font-size: 14px;
     letter-spacing: 1px;
-  }
-  
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -13px;
-    left: -40px;
-    display: block;
-    width: 182px;
-    height: 28px;
-    background-image: url(../img/shadow.png);
-    background-repeat: no-repeat;
-    z-index: -1;
   }
 }
