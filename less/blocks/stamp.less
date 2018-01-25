@@ -1,0 +1,29 @@
+.stamp {
+  background-image: url(../img/bg-stamp.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  
+  p {
+    color: #fff;
+    text-align: center;
+    margin-top: 0;
+  }
+}
+
+.stamp__wrap {
+  position: relative;
+  padding-top: 85px;
+  padding-bottom: 60px;
+  
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    right: -110px;
+    width: 234px;
+    height: 234px;
+    background-image: url(../img/stamp.png);
+    background-repeat: no-repeat;
+  }
+}

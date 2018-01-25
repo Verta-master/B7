@@ -32,6 +32,10 @@
   }
 }
 
+.help__list {
+  margin-bottom: 120px;
+}
+
 .help__item {
   width: 100%;
   height: 250px;
@@ -80,15 +84,61 @@
   }
 }
 
+.help__btns {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 60px;
+}
+
 .help__btn-yellow {
+  position: relative;
+  margin-right: 28px;
   color: #231f1f;
   font-size: 20px;
   font-weight: 700;
   background-color: @yellow;
+  box-shadow: 0px 5px 7px 0px rgba(254, 189, 76, 0.3);
+  
+  &::before {
+    content: "Есть вопрос?";
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 24px;
+    color: #454444;
+    font-weight: 300;
+  }
+  
+  &:hover::before {
+    cursor: default;
+    opacity: 1;
+  }
 }
 
 .help__btn-red {
+  position: relative;
   font-size: 20px;
   font-weight: 700;
   background-color: @red;
+  box-shadow: 0px 5px 7px 0px rgba(188, 43, 48, 0.3);
+  
+  &::before {
+    content: "Есть проблема?";
+    position: absolute;
+    top: -45px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    font-size: 24px;
+    color: #454444;
+    font-weight: 300;
+  }
+  
+  &:hover::before {
+    cursor: default;
+    opacity: 1;
+  }
 }

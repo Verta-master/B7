@@ -177,12 +177,14 @@
           </div>
         </li>
       </ul>
-      <button type="button" class="btn help__btn-yellow">Пишите нам</button>
-      <button type="button" class="btn help__btn-red">Звоните нам</button>
+      <div class="help__btns">
+        <button type="button" class="btn help__btn-yellow">Пишите нам</button>
+        <button type="button" class="btn help__btn-red">Звоните нам</button>
+      </div>
     </section>
     
     <section class="stamp">
-      <div class="wrapper">
+      <div class="stamp__wrap wrapper">
         <p>Все спорные вопросы решаются нами в досудебном претензионном порядке, через суд, органы полиции и прокуратуры, государственные и местные органы власти. Для этого мы готовим и направляем письменные требования, жалобы, исковые заявления, лично представляем ваши интересы в судах и официальных ведомствах. В своей работе мы пользуемся исключительно законными методами защиты и способами воздействия на ответчиков, без привлечения частных силовых и коллекторских структур.</p>
         <p>Со своей стороны, мы стараемся максимально экономить время и нервы наших клиентов. Все, что вам требуется, это заключить с нами и оплатить договор на оказание юридических услуг, а также выдать нам нотариальную доверенность на право представлять ваши интересы в судах и государственных органах. Дальше мы будем действовать самостоятельно и сообщать вам о достигнутых результатах.</p>
       </div>
@@ -192,14 +194,27 @@
       <h2>Судебные решения</h2>
       <div class="swiper-container result__slider">
         <ul class="swiper-wrapper">
-          <li class="swiper-slide">
+          <li class="swiper-slide result__slide">
             <p class="result__date"><span>01</span>/<sup>06</sup></p>
-            <h3></h3>
+            <h3>Возврат денег за мебель</h3>
             <p>После получения аванса за кухню (269 000 руб.), подрядчик нарушил сроки поставки на несколько месяцев и на запросы клиента не реагировал. Клиент обратился за помощью к нашим специалистам.</p>
             <p>Суд признал правоту требований клиента и присудил возмещение ущерба в размере 660 425 руб.</p>
-            <a href="#" class="result__file" download>Посмотреть решение Cуда</a>
+            <a href="#" class="result__file" download><span>Посмотреть решение Cуда</span></a>
           </li>
-          
+          <li class="swiper-slide result__slide">
+            <p class="result__date"><span>01</span>/<sup>06</sup></p>
+            <h3>Возврат денег за мебель</h3>
+            <p>После получения аванса за кухню (269 000 руб.), подрядчик нарушил сроки поставки на несколько месяцев и на запросы клиента не реагировал. Клиент обратился за помощью к нашим специалистам.</p>
+            <p>Суд признал правоту требований клиента и присудил возмещение ущерба в размере 660 425 руб.</p>
+            <a href="#" class="result__file" download><span>Посмотреть решение Cуда</span></a>
+          </li>
+          <li class="swiper-slide result__slide">
+            <p class="result__date"><span>01</span>/<sup>06</sup></p>
+            <h3>Возврат денег за мебель</h3>
+            <p>После получения аванса за кухню (269 000 руб.), подрядчик нарушил сроки поставки на несколько месяцев и на запросы клиента не реагировал. Клиент обратился за помощью к нашим специалистам.</p>
+            <p>Суд признал правоту требований клиента и присудил возмещение ущерба в размере 660 425 руб.</p>
+            <a href="#" class="result__file" download><span>Посмотреть решение Cуда</span></a>
+          </li>
         </ul>
         <div class="swiper-pagination result__pagination"></div>
         <div class="swiper-button-prev result__prev"></div>
@@ -286,6 +301,7 @@
     var mySwiper = new Swiper ('.promo__slider', {
       pagination: {
         el: '.promo__pagination',
+        clickable: true,
       },
       navigation: {
         nextEl: '.promo__next',
@@ -295,9 +311,9 @@
       speed: 1000
     });
     var mySwiper = new Swiper ('.result__slider', {
-      loop: true,
       pagination: {
         el: '.result__pagination',
+        clickable: true,
       },
       navigation: {
         nextEl: '.result__next',
