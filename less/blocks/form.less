@@ -1,5 +1,5 @@
 .form {
-  padding-top: 10px;
+  padding-top: 1px;
   padding-bottom: 65px;
   background-color: @red;
   background-image: url(../img/femida.png);
@@ -12,12 +12,15 @@
     font-weight: 300;
     color: #fff;
     text-transform: uppercase;
+    letter-spacing: 3px;
     
     span {
       display: block;
       color: #fff;
       font-size: 48px;
       font-weight: 700;
+      margin-bottom: 10px;
+      letter-spacing: 5px;
     }
   }
 }
@@ -25,6 +28,7 @@
 .form__wrap {
   padding-right: 67px;
   padding-left: 180px;
+  padding-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -42,17 +46,17 @@
 }
 
 .form__consult {
-  width: 411px;
+  width: 420px;
   border: 10px solid #fff;
-  padding: 30px 40px;
-  padding-top: 50px;
+  padding: 40px 45px;
   color: #fff;
 }
 
 .form__input {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
   padding: 10px;
+  padding-top: 30px;
   color: #fff;
   font-size: 18px;
   background-color: rgba(255,255,255,0);
@@ -80,8 +84,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border: 1px solid @yellow;
     border-radius: 2px;
   }
@@ -111,4 +115,9 @@
   font-weight: 700;
   border-radius: 50px;
   background-color: rgb(35, 31, 31);
+  letter-spacing: 1px;
+}
+
+.form__text {
+  padding-top: 10px;
 }

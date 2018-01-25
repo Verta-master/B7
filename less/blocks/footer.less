@@ -18,10 +18,19 @@
   justify-content: flex-start;
   align-items: flex-start;
   height: 100%;
-  min-height: 220px;
+  min-height: 240px;
   
   &:first-child {
     width: 458px;
+    
+    p {
+      max-width: 100%;
+    }
+  }
+  
+  &:nth-child(2) {
+    margin-left: 60px;
+    margin-right: auto;
   }
   
   &:last-child {
@@ -86,4 +95,10 @@
   &:active {
     opacity: 0.8;
   }
+}
+
+.footer__btn {
+  width: 216px;
+  height: 64px;
+  border-radius: 50px;
 }

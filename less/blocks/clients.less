@@ -1,5 +1,6 @@
 .clients {
-  margin-bottom: 75px;
+  margin-bottom: 65px;
+  padding-top: 35px;
   
   h2 {
     text-align: left;
@@ -18,7 +19,7 @@
   right: 0;
   background-image: url(../img/icon-arrow-red.svg);
   background-repeat: no-repeat;
-  background-size: 21px 38px;
+  background-size: 12px 22px;
 }
 
 .clients__next.swiper-button-disabled {
@@ -31,7 +32,7 @@
   left: 0;
   background-image: url(../img/icon-arrow-red.svg);
   background-repeat: no-repeat;
-  background-size: 21px 38px;
+  background-size: 12px 22px;
   transform: rotate(180deg);
 }
 
@@ -44,16 +45,19 @@
 .clients__slider {
   padding-left: 67px;
   padding-right: 67px;
-  padding-top: 130px;
+  padding-top: 110px;
   padding-bottom: 130px;
   
   .swiper-slide {
     width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 }
 
 .clients__slider > .swiper-pagination-progressbar {
-  bottom: 0;
+  bottom: 10px;
   top: auto;
   left: 50%;
   transform: translateX(-50%);
