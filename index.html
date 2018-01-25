@@ -229,7 +229,7 @@
         <div class="form__wrap">
           <div class="form__text">
             <p>Обсудите с нашим юристом ваш вопрос! Мы подберем для вас наиболее эффективные способы достижения результата!</p>
-            <p class="form__slogan">Нет другого результата, кроме победы!</p>
+            <p class="form__slogan">Нет другого результата,<br>кроме победы!</p>
           </div>
           <form action="#" method="post" class="form__consult">
             <input type="text" name="name" class="form__input" placeholder="Ваше имя">
@@ -261,10 +261,16 @@
           <li class="swiper-slide">
             <img src="img/logo5.png" alt="Logo" width="145" height="87">
           </li>
+          <li class="swiper-slide">
+            <img src="img/logo1.png" alt="Logo" width="156" height="73">
+          </li>
+          <li class="swiper-slide">
+            <img src="img/logo2.png" alt="Logo" width="111" height="95">
+          </li>
         </ul>
+        <div class="swiper-pagination clients__pagination"></div>
         <div class="swiper-button-prev clients__prev"></div>
         <div class="swiper-button-next clients__next"></div>
-        <div class="swiper-scrollbar clients__scrollbar"></div>
       </div>
     </section>
   </main>
@@ -279,10 +285,10 @@
         <p class="footer__comment">© 2018, ИП Панкратов Ю.А.<br>Все права защищены, охраняются законом<br>Информация, размещенная на сайте, публичной офертой не является</p>
       </div>
       <div class="footer__block">
-        <p><span>Адрес</span>
+        <address><span>Адрес</span>
         г. Москва, Москва-Сити<br>
         Башня Федерация Восток, 18 этаж<br>
-        Пресненская набережная, дом 12</p>
+        Пресненская набережная, дом 12</address>
         <a href="#" class="footer__social">
           <img src="img/icon-facebook.svg" alt="Facebook" width="10" height="20">
         </a>
@@ -321,13 +327,15 @@
       },
     });
     var mySwiper = new Swiper ('.clients__slider', {
-      loop: true,
+      slidesPerView: 'auto',
+      slidesPerGroup: 1,
       navigation: {
         nextEl: '.clients__next',
         prevEl: '.clients__prev',
       },
-      scrollbar: {
-        el: '.clients-scrollbar',
+      pagination: {
+        el: '.clients__pagination',
+        type: 'progressbar',
       },
     });
   </script>
