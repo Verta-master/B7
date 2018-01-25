@@ -1,0 +1,67 @@
+.benefits {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  min-height: 400px;
+}
+
+.benefits__item {
+  width: 25%;
+  position: relative;
+  
+  p {
+    font-size: 18px;
+    margin-top: 25px;
+    max-width: 250px;
+  }
+  
+  &:nth-child(2n) {
+    align-self: flex-end;
+  }
+  
+  &::after {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -60px;
+    width: 212px;
+    height: 213px;
+    border: 10px solid #e1e1e1;
+    z-index: -1;
+    opacity: 0;
+    transition: ease-out 0.3s;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+    transition: ease-out 0.3s;
+  }
+}
+
+.benefits__number {
+  font-size: 30px;
+  color: #231f1f;
+  font-weight: 700;
+  line-height: 1;
+  margin: 0;
+  padding-left: 20px;
+  position: relative;
+  
+  span {
+    display: block;
+    font-size: 60px;
+    color: @red;
+    line-height: 0.9;
+  }
+  
+  &:before {
+    content: "более";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 18px;
+    color: #b0b0b0;
+    transform-origin: left top;
+    transform: rotate(-90deg);
+  }
+}
