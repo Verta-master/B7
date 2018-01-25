@@ -47,7 +47,7 @@
               <p class="promo__text">Консультация, подготовка всех документов, участие в судебных заседаниях и полный спектр юридической помощи вплоть до достижения требуемого результата.</p>
               <p class="promo__stamp promo__stamp--2">Разумные цены + Эффективный результат</p>
               <p class="promo__price">от <b>29 900</b><span> руб.</span></p>
-              <button type="button" class="btn btn--red promo__btn">Позвоните мне</button>
+              <button type="button" class="btn btn--red promo__btn call">Позвоните мне</button>
               <div class="promo__name">
                 <p><b>Юрий</b> Панкратов</p>
                 <span>судебный юрист</span>
@@ -62,7 +62,7 @@
               <p class="promo__text">Консультация, подготовка всех документов, участие в судебных заседаниях и полный спектр юридической помощи вплоть до достижения требуемого результата.</p>
               <p class="promo__stamp promo__stamp--3">Разумные цены + Эффективный результат</p>
               <p class="promo__price">от <b>49 900</b><span> руб.</span></p>
-              <button type="button" class="btn btn--red promo__btn">Позвоните мне</button>
+              <button type="button" class="btn btn--red promo__btn call">Позвоните мне</button>
               <div class="promo__name">
                 <p><b>Антон</b> Уразов</p>
                 <span>арбитражный управляющий</span>
@@ -135,43 +135,57 @@
       <h2><span>Наши</span> юристы и эксперты помогут вам</h2>
       <ul class="help__list">
         <li class="help__item">
-          <img src="img/img-1.jpg" alt="Расторгнуть договор и вернуть деньги" width="570" height="250">
+          <figure class="help__img">
+            <img src="img/img-1.jpg" alt="Расторгнуть договор и вернуть деньги" width="570" height="250">
+          </figure>
           <div class="help__block">
             <p>Расторгнуть договор и вернуть деньги, уплаченные за товар, работу или услугу ненадлежащего качества</p>
           </div>
         </li>
         <li class="help__item">
-          <img src="img/img-2.jpg" alt="Взыскать неустойку на просрочку" width="570" height="250">
+          <figure class="help__img">
+            <img src="img/img-2.jpg" alt="Взыскать неустойку на просрочку" width="570" height="250">
+          </figure>
           <div class="help__block">
             <p>Взыскать неустойку на просрочку доставки товара, оказания услуги (работы), за неисполнение вашего законного требования</p>
           </div>
         </li>
         <li class="help__item">
-          <img src="img/img-3.jpg" alt="Добиться возмещения вреда" width="570" height="250">
+          <figure class="help__img">
+            <img src="img/img-3.jpg" alt="Добиться возмещения вреда" width="570" height="250">
+          </figure>
           <div class="help__block">
             <p>Добиться возмещения вреда, причиненного вашей жизни, здоровью или имуществу</p>
           </div>
         </li>
         <li class="help__item">
-          <img src="img/img-4.jpg" alt="Компенсировать моральный и материальный ущерб" width="570" height="250">
+          <figure class="help__img">
+            <img src="img/img-4.jpg" alt="Компенсировать моральный и материальный ущерб" width="570" height="250">
+          </figure>
           <div class="help__block">
             <p>Компенсировать моральный и материальный ущерб, а также понесенные вами расходы</p>
           </div>
         </li>
         <li class="help__item">
-          <img src="img/img-5.jpg" alt="Истребовать долг в судебном порядке" width="570" height="250">
+          <figure class="help__img">
+            <img src="img/img-5.jpg" alt="Истребовать долг в судебном порядке" width="570" height="250">
+          </figure>
           <div class="help__block">
             <p>Истребовать долг в судебном порядке, арестовать и взыскать имущество и деньги должника через процедуру банкротства</p>
           </div>
         </li>
         <li class="help__item">
-          <img src="img/img-6.jpg" alt="Добиться исполнения судебного решения" width="570" height="250">
+          <figure class="help__img">
+            <img src="img/img-6.jpg" alt="Добиться исполнения судебного решения" width="570" height="250">
+          </figure>
           <div class="help__block">
             <p>Добиться исполнения судебного решения в принудительном порядке через Федеральную службу судебных приставов</p>
           </div>
         </li>
         <li class="help__item">
-          <img src="img/img-7.jpg" alt="Защитить ваши интересы" width="570" height="250">
+          <figure class="help__img">
+            <img src="img/img-7.jpg" alt="Защитить ваши интересы" width="570" height="250">
+          </figure>
           <div class="help__block">
             <p>Защитить ваши интересы в контролирующих и надзорных ведомствах, полиции и прокуратуре</p>
           </div>
@@ -332,16 +346,16 @@
       <p>Возможна бесплатная видеоконсультация по скайп/телеграм/вотсап для экономии Вашего времени.<br>Пишите, чтобы назначить время.</p>
       <form action="#" method="post" class="modal__form">
         <div class="modal__field">
-          <label for="name" class="modal__label">ФИО: <span>*</span></label>
-          <input type="text" name="name" id="name" class="modal__input" required>
-          <label for="phone" class="modal__label">Телефон: <span>*</span></label>
-          <input type="tel" name="phone" id="phone" class="modal__input" required>
-          <label for="email" class="modal__label">E-mail:</label>
-          <input type="email" name="email" id="email" class="modal__input">
-          <label for="text" class="modal__label">Комментарий:</label>
-          <textarea name="text" id="text" class="modal__area"></textarea>
-          <input type="checkbox" name="check" id="yes" class="modal__check" checked>
-          <label for="yes" class="modal__agreement">Даю свое согласие на обработку персональных данных.</label>
+          <label for="name2" class="modal__label">ФИО: <span>*</span></label>
+          <input type="text" name="name" id="name2" class="modal__input" required>
+          <label for="phone2" class="modal__label">Телефон: <span>*</span></label>
+          <input type="tel" name="phone" id="phone2" class="modal__input" required>
+          <label for="email2" class="modal__label">E-mail:</label>
+          <input type="email" name="email" id="email2" class="modal__input">
+          <label for="text2" class="modal__label">Комментарий:</label>
+          <textarea name="text" id="text2" class="modal__area"></textarea>
+          <input type="checkbox" name="check" id="yes2" class="modal__check" checked>
+          <label for="yes2" class="modal__agreement">Даю свое согласие на обработку персональных данных.</label>
           <button type="submit" class="btn modal__btn modal__btn--yellow">Отправить</button>
         </div>
       </form>
