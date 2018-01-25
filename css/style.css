@@ -1950,6 +1950,10 @@ h2 span {
   .modal__field {
     max-width: 100%;
   }
+  .footer__block address,
+  .price__amount {
+    max-width: 100%;
+  }
 }
 @media (max-width: 480px) {
   .header {
