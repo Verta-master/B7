@@ -14,8 +14,8 @@
     </div>
     <div class="header__block">
       <a href="Tel:+74993481843" class="phone">+7 (499) 348-18-43</a>
-      <button type="button" class="btn btn--red header__btn">Есть проблема?<br>Звоните нам</button>
-      <button type="button" class="btn btn--yellow">Есть вопрос?<br>Пишите нам</button>
+      <button type="button" class="btn btn--red header__btn call">Есть проблема?<br>Звоните нам</button>
+      <button type="button" class="btn btn--yellow email">Есть вопрос?<br>Пишите нам</button>
     </div>
   </header>
   
@@ -31,7 +31,7 @@
               <p class="promo__text">Консультация, подготовка документов, участие в судебных заседаниях и полный спектр юридической помощи вплоть до достижения требуемого результата по <span>фиксированным ценам</span>.</p>
               <p class="promo__stamp">Фиксированные цены. Никаких скрытых комиссий</p>
               <p class="promo__price">от <b>19 900</b><span> руб.</span></p>
-              <button type="button" class="btn btn--red promo__btn">Позвоните мне</button>
+              <button type="button" class="btn btn--red promo__btn call">Позвоните мне</button>
               <div class="promo__name">
                 <p><b>Олег</b> Гуров</p>
                 <span>специалист по работе с госорганами</span>
@@ -178,8 +178,8 @@
         </li>
       </ul>
       <div class="help__btns">
-        <button type="button" class="btn help__btn-yellow">Пишите нам</button>
-        <button type="button" class="btn help__btn-red">Звоните нам</button>
+        <button type="button" class="btn help__btn-yellow email">Пишите нам</button>
+        <button type="button" class="btn help__btn-red call">Звоните нам</button>
       </div>
     </section>
     
@@ -295,14 +295,63 @@
       </div>
       <div class="footer__block">
         <a href="Tel:+74993481843" class="phone">+7 (499) 348-18-43</a>
-        <button type="button" class="btn btn--red footer__btn">Связаться с нами</button>
+        <button type="button" class="btn btn--red footer__btn email">Связаться с нами</button>
         <p>в рабочии дни<br>с 10:00 до 20:00</p>
         <p class="footer__comment">e-mail: <a href="#">info@b7.ru</a></p>
       </div>
     </div>
   </footer>
   
+  <div style="display: none;">
+    <div class="modal" id="modal-call">
+      <button type="button" class="modal__close arcticmodal-close"></button>
+      <h2>заказать звонок</h2>
+      <p>Возможна бесплатная видеоконсультация по скайп/телеграм/вотсап для экономии Вашего времени.<br>Звоните, чтобы назначить время.</p>
+      <form action="#" method="post" class="modal__form">
+        <div class="modal__field">
+          <label for="name" class="modal__label">ФИО: <span>*</span></label>
+          <input type="text" name="name" id="name" class="modal__input" required>
+          <label for="phone" class="modal__label">Телефон: <span>*</span></label>
+          <input type="tel" name="phone" id="phone" class="modal__input" required>
+          <label for="email" class="modal__label">E-mail:</label>
+          <input type="email" name="email" id="email" class="modal__input">
+          <label for="text" class="modal__label">Комментарий:</label>
+          <textarea name="text" id="text" class="modal__area"></textarea>
+          <input type="checkbox" name="check" id="yes" class="modal__check" checked>
+          <label for="yes" class="modal__agreement">Даю свое согласие на обработку персональных данных.</label>
+          <button type="submit" class="btn modal__btn modal__btn--red">Перезвоните мне</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <div style="display: none;">
+    <div class="modal" id="modal-email">
+      <button type="button" class="modal__close arcticmodal-close"></button>
+      <h2>Написать письмо</h2>
+      <p>Возможна бесплатная видеоконсультация по скайп/телеграм/вотсап для экономии Вашего времени.<br>Пишите, чтобы назначить время.</p>
+      <form action="#" method="post" class="modal__form">
+        <div class="modal__field">
+          <label for="name" class="modal__label">ФИО: <span>*</span></label>
+          <input type="text" name="name" id="name" class="modal__input" required>
+          <label for="phone" class="modal__label">Телефон: <span>*</span></label>
+          <input type="tel" name="phone" id="phone" class="modal__input" required>
+          <label for="email" class="modal__label">E-mail:</label>
+          <input type="email" name="email" id="email" class="modal__input">
+          <label for="text" class="modal__label">Комментарий:</label>
+          <textarea name="text" id="text" class="modal__area"></textarea>
+          <input type="checkbox" name="check" id="yes" class="modal__check" checked>
+          <label for="yes" class="modal__agreement">Даю свое согласие на обработку персональных данных.</label>
+          <button type="submit" class="btn modal__btn modal__btn--yellow">Отправить</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  
+  <script src="js/jquery-3.2.1.min.js"></script>
+  <script src="js/jquery.arcticmodal-0.3.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.1.0/js/swiper.min.js"></script>
+<!-- Sliders -->
   <script>
     var mySwiper = new Swiper ('.promo__slider', {
       pagination: {
@@ -337,6 +386,34 @@
         el: '.clients__pagination',
         type: 'progressbar',
       },
+    });
+  </script>
+  
+<!-- Modal windows -->
+  <script>
+    $(".call").click(function(){
+      $(function(){
+        $("#modal-call").arcticmodal({
+          overlay: {
+          css: {
+            backgroundColor: "#000",
+            opacity: .8,
+            }
+          }
+        });
+      });
+    });
+    $(".email").click(function(){
+      $(function(){
+        $("#modal-email").arcticmodal({
+          overlay: {
+          css: {
+            backgroundColor: "#000",
+            opacity: .8,
+            }
+          }
+        });
+      });
     });
   </script>
 </body>
